@@ -1,8 +1,11 @@
 # CREACION DEL PAYPAL
 
->Proposito: Crearemos una html con css para rellenar la venta y poder pagarlo por medio de PAYPAL
+>Proposito: Crearemos una html con css para rellenar la venta y poder pagarlo por medio de PAYPAL.
 
--En este caso el motor que usamos fue Visual Studio Code
+-En este caso el motor que usamos fue Visual Studio Code. Lo isimos en grupo de dos personas.
+Integrantes:
+ -Maricarmen Catalina Raymundo Romero
+ -Adrian Alvarado
 ###### RECOMENDACION:
 ###### Tener instalador el Go Live en Visual Studio
 
@@ -21,10 +24,47 @@
 ###### Entrar a este link para copiar los Framework
 https://developer.paypal.com/demo/checkout/#/pattern/style
 ![image](https://github.com/Bloddy20Moon/Junio_Buho/assets/118792974/89b07e0d-9b8a-45cf-97e9-0885fe130b68)
-
 + Paso 3:
-  * Para que la pagina se vea mas presentable le vamos a agregar los estilos, estos estan en la carpeta styles/style.css
-  * En este caso hemos agregados estos datos
+* Para que al rellenar el monto, pusimos que el value del PAYPAL, sea igual al monto, de esta manera
+```html
+<div class="form-group">
+                <label for="monto">Monto a pagar:</label>
+                <input type="text" id="monto" name="monto" placeholder="Ingresa el monto a pagar">
+            </div>
+```
+* Y para el monto sería:
+```html
+ <script>
+        paypal.Buttons({
+            style: {
+                color:  'blue',
+                shape:  'pill',
+                label:  'pay',
+                height: 40
+            },
+            createOrder: function(data, actions) {
+                return actions.order.create({
+                    purchase_units:[{
+                        amount: {
+                            value: document.getElementById('monto').value
+                        }
+                    }]
+                });
+            },
+            onCancel: function(data) {
+                alert("Pago cancelado");
+            }
+        }).render("#paypal-button-container");
+
+        
+    </script>
+```
+* Siendo donde se ve el cambio en:
+![image](https://github.com/Bloddy20Moon/Junio_Buho/assets/118792974/408cbaac-985f-4b00-b607-5ed7ad35e7cd)
+
++ Paso 4:
+* Para que la pagina se vea mas presentable le vamos a agregar los estilos, estos estan en la carpeta styles/style.css
+* En este caso hemos agregados estos datos
 
 ```Css
 * {
@@ -118,8 +158,8 @@ body {
   
 }
 ``` 
-+ Paso 4:
-    * Vamos a agregarle un boton para que se pueda oscurecer el formulario
++ Paso 5:
+* Vamos a agregarle un boton para que se pueda oscurecer el formulario
 
 ``` html
 <button class=" switch" id="switch">
@@ -250,3 +290,21 @@ btnSwitch.addEventListener('click',()=> {
     btnSwitch.classList.toggle('active');
 });
 ```
+* El boton se vería de esta forma tenemos dos botones, los cuales se verían de esta manera
+* Opción oscurecer:
+![image](https://github.com/Bloddy20Moon/Junio_Buho/assets/118792974/55167044-27b5-420a-b301-d8f0fccc4ec3)
+* Opción aclarar:
+![image](https://github.com/Bloddy20Moon/Junio_Buho/assets/118792974/1402c64e-728d-481c-be85-387caaa92675)
+
+# RESULTADO:
+* Ya llenado todos los pasos se vería de esta manera (de manera oscura)
+![image](https://github.com/Bloddy20Moon/Junio_Buho/assets/118792974/783e96a5-eb3d-455f-9b20-5cce315c4b29)
+* De manera clara:
+ ![image](https://github.com/Bloddy20Moon/Junio_Buho/assets/118792974/d99aa428-100f-4e1c-b67c-5df801a2d38d)
+* El monto se vería de esta manera: 
+* 
+![image](https://github.com/Bloddy20Moon/Junio_Buho/assets/118792974/dcee4f61-de7b-4b33-b1f2-e6e49ba5c008)
+* Al querer pagar se vería así en el PAYPAL
+* 
+![image](https://github.com/Bloddy20Moon/Junio_Buho/assets/118792974/9c685b40-e115-47fb-a9ca-70e3a5e9beee)
+
