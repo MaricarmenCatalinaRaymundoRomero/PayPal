@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro con PayPal</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="https://www.paypal.com/sdk/js?client-id=test&currency=USD"></script>
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="boton cambios/estilos.css">
+    
+</head>
+<body>
+    
+    <button class=" switch" id="switch">
+        <span><i class="fas fa-sun"></i></span>
+        <span><i class="fas fa-moon"></i></span>
+
+    </button>
+
+    <div class="form-container">
+        <h1><img src="images/logo.png" alt="PayPal" style="vertical-align: middle; width: 150px;"></h1>
+
+
+
+        <form action="#" method="POST">
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu(s) nombre(s)">
+            </div>
+            <div class="form-group">
+                <label for="monto">Apellido:</label>
+                <input type="text" id="Apellido" name="apellido" placeholder="Ingresa tu apellido(s)">
+            </div>
+            <div class="form-group">
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" placeholder="Ingresa tu correo electrónico">
+            </div>
+            <div class="form-group">
+                <label for="monto">Monto a pagar:</label>
+                <input type="text" id="monto" name="monto" placeholder="Ingresa el monto a pagar">
+            </div>
+            <div id="paypal-button-container"></div>
+          
+        </form>
+        
+    </div>
+    
+    <script>
+        paypal.Buttons({
+            style: {
+                color:  'blue',
+                shape:  'pill',
+                label:  'pay',
+                height: 40
+            },
+            createOrder: function(data, actions) {
+                return actions.order.create({
+                    purchase_units:[{
+                        amount: {
+                            value: document.getElementById('monto').value
+                        }
+                    }]
+                });
+            },
+            onCancel: function(data) {
+                alert("Pago cancelado");
+            }
+        }).render("#paypal-button-container");
+
+        
+    </script>
+       
+       <script src="boton cambios/main.js"></script>
+      
+</body>
+</html>
+
+

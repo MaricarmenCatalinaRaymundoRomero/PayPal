@@ -1,0 +1,87 @@
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.form-container {
+  width: 50%;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 30px;
+}
+.form-container {
+  margin: 0 auto;
+  max-width: 400px;
+}
+
+
+h1 {
+  color: #333;
+  font-size: 32px;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+}
+
+.paypal-button {
+  display: block;
+  margin: 20px auto 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  text-align: center;
+}
+
+.paypal-button img {
+  width: 150px;
+}
+
+.paypal-button {
+    display: block;
+    margin: 20px auto 0;
+    border: none;
+    background-color: #798996;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.paypal-button:hover {
+    background-color: #156797;
+}
+
+
+
