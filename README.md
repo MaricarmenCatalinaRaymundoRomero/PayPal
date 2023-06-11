@@ -304,9 +304,11 @@ btnSwitch.addEventListener('click',()=> {
 * De manera clara:
  ![image](https://github.com/Bloddy20Moon/Junio_Buho/assets/118792974/d99aa428-100f-4e1c-b67c-5df801a2d38d)
 * El monto se vería de esta manera: 
-* 
+
+
 ![image](https://github.com/Bloddy20Moon/Junio_Buho/assets/118792974/dcee4f61-de7b-4b33-b1f2-e6e49ba5c008)
 * Al querer pagar se vería así en el PAYPAL
-* 
+
+
 ![image](https://github.com/Bloddy20Moon/Junio_Buho/assets/118792974/9c685b40-e115-47fb-a9ca-70e3a5e9beee)
 
