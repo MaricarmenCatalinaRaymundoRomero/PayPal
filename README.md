@@ -2,10 +2,12 @@
 
 >Proposito: Crearemos una html con css para rellenar la venta y poder pagarlo por medio de PAYPAL.
 
--En este caso el motor que usamos fue Visual Studio Code. Lo isimos en grupo de dos personas.
-Integrantes:
- -Maricarmen Catalina Raymundo Romero
- -Adrian Alvarado
++ En este caso el motor que usamos fue Visual Studio Code. Lo isimos en grupo de dos personas.
+
+
++ Integrantes:
+  * Maricarmen Catalina Raymundo Romero
+  * Adrian Alvarado
 ###### RECOMENDACION:
 ###### Tener instalador el Go Live en Visual Studio
 
